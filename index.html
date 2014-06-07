@@ -1,1 +1,66 @@
-Hello
+<html>
+  <head>
+	  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<style>
+		  #signup {
+				width: 250px;
+				border-radius: 50%;
+			}
+			.header .container{
+				height: 200px;
+				display: block;
+				position: relative;
+				margin: auto 60px;
+				top: 20%;
+			}
+			.navbar{
+				background: #000;
+			}
+		</style>
+		<link rel="stylesheet" href="bower_components/onepage-scroll/onepage-scroll.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="navbar-header">
+		    <a class="navbar-brand" href="#">DESLAUNCH</a>
+		  </div>
+		  <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="active"><a href="./">Default</a></li>
+	        <li><a href="../navbar-static-top/">Static top</a></li>
+	        <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+	      </ul>
+	    </div>
+		</nav>
+	  <div class="main-wrapper">
+	  	<section class="header">
+	  		<div class="container">
+	  			<input type="text" />
+	  		</div>
+	  	</section>
+	  	<section class="section2">
+	  		
+	  	</section>
+	  </div>
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="bower_components/onepage-scroll/jquery.onepage-scroll.js"></script>
+		<script>
+		$(function(){
+			$(".main-wrapper").onepage_scroll({
+			   sectionContainer: "section", 
+			   easing: "ease", 
+			   animationTime: 1000,
+			   pagination: true,
+			   updateURL: false,
+			   beforeMove: function(index) {},
+			   afterMove: function(index) {},
+			   loop: false,
+			   keyboard: true,
+			   responsiveFallback: false,
+			   direction: "vertical"
+			});
+		});
+		</script>
+	</body>
+</html>

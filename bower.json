@@ -1,9 +1,10 @@
 {
-  "name" : "Deslaunch.com",
-  "version" : "0.0.1",
-  "dependencies" : {
+  "name": "Deslaunch.com",
+  "version": "0.0.1",
+  "dependencies": {
     "bootstrap": "~3.1",
     "jquery": "~2.1",
-    "modernizer": "~2.8"
+    "modernizer": "~2.8",
+    "onepage-scroll": "~1.1.1"
   }
 }
