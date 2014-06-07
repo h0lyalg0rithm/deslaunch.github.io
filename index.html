@@ -1,10 +1,15 @@
 <html>
   <head>
 	  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="bower_components/onepage-scroll/onepage-scroll.css" />
+		<link rel="stylesheet" href="bower_components/animate.css/animate.css">
 		<style>
 		  #signup {
 				width: 250px;
 				border-radius: 50%;
+			}
+			.header{
+				background: #ffcc00;
 			}
 			.header .container{
 				height: 200px;
@@ -12,14 +17,36 @@
 				position: relative;
 				margin: auto 60px;
 				top: 20%;
+				text-align: center;
 			}
 			.navbar{
 				background: #000;
 				border-radius: 0px;
 				z-index: 2;
 			}
+			.sign_up{
+				background: #27ae60;
+				color: white;
+			}
+			.onepage-pagination{
+				left:10px;
+				right:0;
+			}
+			.start_email{
+				border: none;
+				border-bottom: 2px solid #000;
+				outline: none;
+				font-size: 30px;
+				background: transparent;
+				width: 280px;
+				-webkit-animation-duration: 1s;
+			  -webkit-animation-delay: 0.5s;
+			  -webkit-animation-iteration-count: 1;
+			}
+			.main-wrapper{
+				margin-top: -60px;
+			}
 		</style>
-		<link rel="stylesheet" href="bower_components/onepage-scroll/onepage-scroll.css" />
 	</head>
 	<body>
 		<nav class="navbar navbar-default" role="navigation">
@@ -34,16 +61,18 @@
 		      <a class="navbar-brand" href="#">DESLAUNCH</a>
 		    </div>
 		    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-		        <li><a href="#">SIGN UP</a></li>
-		      </ul>
+		      <form class="navbar-form">
+            <a class="btn sign_up pulse" href="#">SIGN UP</a>
+          </form>
 		    </div>
 		  </div>
 		</nav>
 	  <div class="main-wrapper">
 	  	<section class="header">
 	  		<div class="container">
-	  			<input type="text" />
+	  			<h2>CREATE YOUR RESUME IN SECONDS</h2>
+	  			<h2>LETS START WITH YOUR EMAIL</h2>
+	  			<input type="text" class="animated bounceIn start_email" placeholder="email@example.com"/>
 	  		</div>
 	  	</section>
 	  	<section class="section2">
