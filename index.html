@@ -4,6 +4,8 @@
 	  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 		<link rel="stylesheet" href="bower_components/onepage-scroll/onepage-scroll.css" />
 		<link rel="stylesheet" href="bower_components/animate.css/animate.css">
+		<!-- <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"> -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<style>
 		  #signup {
 				width: 250px;
@@ -55,6 +57,20 @@
 			.main-wrapper{
 				margin-top: -70px;
 			}
+			div.arrow-nav {
+				bottom: 40px;
+				position: absolute;
+				left: 50%;
+			}
+			.arrow-nav{
+				font-size: 35px;
+				-webkit-animation-duration: 1s;
+			  -webkit-animation-delay: 0.5s;
+			  -webkit-animation-iteration-count: infinite;
+			}
+			.arrow-nav:hover{
+				cursor: pointer;
+			}
 		</style>
 	</head>
 	<body>
@@ -83,6 +99,9 @@
 	  			<h2>LETS START WITH YOUR EMAIL</h2>
 	  			<input type="text" class="animated bounceIn start_email" placeholder="email@example.com"/>
 	  		</div>
+  			<div class="arrow-nav animated pulse">
+	  			<i class="fa fa-chevron-down"></i>
+  			</div>
 	  	</section>
 	  	<section class="section2">
 	  		
