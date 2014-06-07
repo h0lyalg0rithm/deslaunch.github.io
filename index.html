@@ -65,11 +65,14 @@
 			.arrow-nav{
 				font-size: 35px;
 				-webkit-animation-duration: 1s;
-			  -webkit-animation-delay: 0.5s;
+			  -webkit-animation-delay: 0.25s;
 			  -webkit-animation-iteration-count: infinite;
 			}
 			.arrow-nav:hover{
 				cursor: pointer;
+			}
+			.section1 .container{
+				margin-top: 60px;
 			}
 		</style>
 	</head>
@@ -103,7 +106,31 @@
 	  			<i class="fa fa-chevron-down"></i>
   			</div>
 	  	</section>
-	  	<section class="section2">
+	  	<section class="section1">
+	  		<div class="container">
+	  			<div class="row">
+	  				<div class="col-md-6">
+	  					<img src="http://placehold.it/300x300"/>
+	  					<h5 class="text-center">Title</h5>
+	  				</div>
+	  				<div class="col-md-6">
+	  					<img src="http://placehold.it/300x300"/>
+	  					<h5 class="text-center">Title</h5>
+	  				</div>
+	  			</div>
+	  			<div class="row">
+	  				<div class="col-md-6">
+	  					<img src="http://placehold.it/300x300"/>
+	  					<h5 class="text-center">Title</h5>
+	  				</div>
+	  				<div class="col-md-6">
+	  					<img src="http://placehold.it/300x300"/>
+	  					<h5 class="text-center">Title</h5>
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</section>
+	  	<section>
 	  		
 	  	</section>
 	  </div>
@@ -123,8 +150,7 @@
 			  responsiveFallback: false,
 			  direction: "vertical",
 			  beforeMove: function(index) {
-			  	// alert(index);
-		    	if(index <= 1){
+		    	if(index >= 1){
 		    		$('.navbar').removeClass('navbar-first');
 		    	}else{
 		    		$('.navbar').addClass('navbar-first');
