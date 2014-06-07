@@ -12,17 +12,25 @@
 				background: #ffcc00;
 			}
 			.header .container{
-				height: 200px;
 				display: block;
 				position: relative;
-				margin: auto 60px;
-				top: 20%;
+				top: 35%;
 				text-align: center;
 			}
 			.navbar{
 				background: #000;
 				border-radius: 0px;
 				z-index: 2;
+				transition: top 3s;
+			}
+			.navbar-first{
+				border: none;
+				background: transparent;
+				margin-left: 60px;
+				top: 45px;
+			}
+			.navbar-brand{
+				font-size: 20px;
 			}
 			.sign_up{
 				background: #27ae60;
@@ -44,12 +52,12 @@
 			  -webkit-animation-iteration-count: 1;
 			}
 			.main-wrapper{
-				margin-top: -60px;
+				margin-top: -70px;
 			}
 		</style>
 	</head>
 	<body>
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-default navbar-first" role="navigation">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -85,17 +93,23 @@
 		<script>
 		$(function(){
 			$(".main-wrapper").onepage_scroll({
-			   sectionContainer: "section", 
-			   easing: "ease", 
-			   animationTime: 1000,
-			   pagination: true,
-			   updateURL: false,
-			   beforeMove: function(index) {},
-			   afterMove: function(index) {},
-			   loop: false,
-			   keyboard: true,
-			   responsiveFallback: false,
-			   direction: "vertical"
+			  sectionContainer: "section", 
+			  easing: "ease", 
+			  animationTime: 1000,
+			  pagination: true,
+			  updateURL: false,
+			  loop: false,
+			  keyboard: true,
+			  responsiveFallback: false,
+			  direction: "vertical",
+			  beforeMove: function(index) {
+			  	// alert(index);
+		    	if(index <= 1){
+		    		$('.navbar').removeClass('navbar-first');
+		    	}else{
+		    		$('.navbar').addClass('navbar-first');
+		    	}
+		    }
 			});
 		});
 		</script>
